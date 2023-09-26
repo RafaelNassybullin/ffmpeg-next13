@@ -1,0 +1,36 @@
+{
+  "name": "next13-ffmpeg-media-hub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 1926",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@prisma/client": "^5.1.1",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.19",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
+    "debug": "^4.3.4",
+    "heroicons": "^2.0.18",
+    "jose": "^4.14.4",
+    "nanoid": "^4.0.2",
+    "next": "13.4.13",
+    "next13-progressbar": "^1.0.2",
+    "postcss": "8.4.27",
+    "pretty-ms": "^8.0.0",
+    "prisma": "^5.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-video-progress": "^2.0.0",
+    "supports-color": "^8.1.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  }
+}

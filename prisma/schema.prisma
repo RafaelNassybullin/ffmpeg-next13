@@ -1,0 +1,53 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Card {
+  id          Int        @id @default(autoincrement())
+  title       String
+  description String
+  duration    String
+  name        String     @unique
+  image       String
+  preview     String
+  slug        String     @unique
+  width       Int
+  height      Int
+  createdAt   DateTime   @default(now())
+  categories  Category[]
+  views       Views?
+  timeStamp   TimeStamp?
+}
+
+model Category {
+  id   Int    @id @default(autoincrement())
+  card Card[]
+  name String
+}
+
+model Views {
+  id     Int  @id @default(autoincrement())
+  cardID Int  @unique
+  card   Card @relation(fields: [cardID], references: [id])
+  count  Int
+}
+
+model TimeStamp {
+  id     Int    @id @default(autoincrement())
+  cardID Int    @unique
+  card   Card   @relation(fields: [cardID], references: [id])
+  time   String
+}
+
+model Banner {
+  id   Int    @id @default(autoincrement())
+  name String
+  img  String
+  url  String
+}
